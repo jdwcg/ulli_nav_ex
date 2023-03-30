@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="ko">
-   <head data-include="./include/head.html"></head>
+  <head data-include="./include/head.html"></head>
 
-   <body>
-      <div class="wrapper">
-         <header class="hd"></header>
+  <body>
+    <div class="wrapper">
+      <header class="hd"></header>
 
-         <main class="main">content.....</main>
+      <main class="main">content.....</main>
 
-         <footer class="ft"></footer>
-      </div>
+      <footer class="ft"></footer>
+    </div>
 
-      <script src="./include/include.js" defer></script>
-      <script src="./js/jquery-3.6.1.min.js"></script>
-      <script>
-         $.ajax({
-            url: "../include/header.html",
-            success: function (result) {
-               $(".hd").html(result)
-            },
-         })
-         $.ajax({
-            url: "../include/footer.html",
-            success: function (result) {
-               $(".ft").html(result)
-            },
-         })
-      </script>
-   </body>
+    <script src="./include/include.js" defer></script>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+    <script>
+      $.ajax({
+        url: "../include/header.html",
+        success: function (result) {
+          $(".hd").html(result);
+        },
+      });
+      $.ajax({
+        url: "../include/footer.html",
+        success: function (result) {
+          $(".ft").html(result);
+        },
+      });
+    </script>
+  </body>
 </html>

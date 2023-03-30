@@ -1,12 +1,72 @@
+body {
+  background: #f7f7f7;
+}
+@mixin r {
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+@mixin contain {
+  width: 1200px;
+}
 .hd {
-   .nav {
-      .gnb_wrap {
-         > li {
-            > ul {
-               > li {
-               }
-            }
-         }
+  width: 100%;
+  background: white;
+  @include r;
+  position: fixed;
+  .nav {
+    @include r;
+    @include contain;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    height: 100%;
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+    .logo {
+      @include r;
+      a {
+        @include r;
       }
-   }
+    }
+    .gnb_wrap {
+      display: flex;
+      @media (max-width: 640px) {
+        flex-direction: column;
+      }
+      > li {
+        a {
+          @include r;
+          display: flex;
+          align-items: center;
+        }
+        > ul {
+          max-height: 0;
+          overflow: hidden;
+          > li {
+          }
+        }
+      }
+    }
+  }
+}
+.hd .nav .gnb_wrap > li > ul.on {
+  max-height: 400px;
+  transition: all 0.3s ease-in;
+}
+
+.main {
+  padding: 50px 0;
+  margin: 0 auto;
+  @include contain;
+  @include r;
+}
+.ft {
+  background: white;
+  @include r;
+  .ft_inn {
+    @include r;
+    @include contain;
+    margin: 0 auto;
+  }
 }

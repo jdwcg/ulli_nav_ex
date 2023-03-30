@@ -1,0 +1,75 @@
+body {
+  background: #f7f7f7;
+}
+
+.hd {
+  width: 100%;
+  background: white;
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+  position: fixed;
+}
+.hd .nav {
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+}
+@media (max-width: 640px) {
+  .hd .nav {
+    flex-direction: column;
+  }
+}
+.hd .nav .logo {
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+.hd .nav .logo a {
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+.hd .nav .gnb_wrap {
+  display: flex;
+}
+@media (max-width: 640px) {
+  .hd .nav .gnb_wrap {
+    flex-direction: column;
+  }
+}
+.hd .nav .gnb_wrap > li a {
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+  display: flex;
+  align-items: center;
+}
+.hd .nav .gnb_wrap > li > ul {
+  max-height: 0;
+  overflow: hidden;
+}
+.hd .nav .gnb_wrap > li > ul.on {
+  max-height: 400px;
+  transition: all 0.3s ease-in;
+}
+
+.main {
+  padding: 50px 0;
+  margin: 0 auto;
+  width: 1200px;
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+
+.ft {
+  background: white;
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+}
+.ft .ft_inn {
+  border-left: 1px solid pink;
+  border-right: 1px solid pink;
+  width: 1200px;
+  margin: 0 auto;
+}
