@@ -10,16 +10,16 @@ $(function () {
    }
 
    let lnb1 = [
-      { tit: "lnb_d", url: "./pages/test/html" },
-      { tit: "lnb_e", url: "./pages/test/html" },
-      { tit: "lnb_f", url: "./pages/test/html" },
-      { tit: "lnb_g", url: "./pages/test/html" },
+      { tit: "lnb_d", url: "./page/test.html" },
+      { tit: "lnb_e", url: "./page/test.html" },
+      { tit: "lnb_f", url: "./page/test.html" },
+      { tit: "lnb_g", url: "./page/test.html" },
    ]
    let lnb2 = [
-      { tit: "lnb_h", url: "./pages/test/html" },
-      { tit: "lnb_i", url: "./pages/test/html" },
-      { tit: "lnb_j", url: "./pages/test/html" },
-      { tit: "lnb_k", url: "./pages/test/html" },
+      { tit: "lnb_h", url: "./page/test.html" },
+      { tit: "lnb_i", url: "./page/test.html" },
+      { tit: "lnb_j", url: "./page/test.html" },
+      { tit: "lnb_k", url: "./page/test.html" },
    ]
    for (let i = 0; i < lnb1.length; i++) {
       $(".gnb_wrap > li:nth-child(1)").append(`<ul><li><a href='${lnb1[i].url}'>${lnb1[i].tit}</a></li></ul>`)
