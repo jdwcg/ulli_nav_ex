@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html lang="ko">
-   <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>ex</title>
-      <!-- <link rel="stylesheet" href="css/reset.css" /> -->
-      <link rel="stylesheet" href="css/util.css" />
-      <script src="./js/jquery-3.6.1.min.js"></script>
-   </head>
-   <body>
-      <ul class="gnbWrap"></ul>
-      <script>
-         $(function () {
-            let gnb = [
-               { tit: "gnb_a", url: "https://naver.com" },
-               { tit: "gnb_b", url: "https://google.com" },
-               { tit: "gnb_c", url: "https://google.com" },
-            ]
+   <head data-include="./include/head.html"></head>
 
-            for (let i = 0; i < gnb.length; i++) {
-               $(".gnbWrap").append(`<li><a href='${gnb[i].url}'>${gnb[i].tit}</a></li>`)
-            }
-            let lnb1 = [
-               { tit: "lnb_d", url: "./pages/test/html" },
-               { tit: "lnb_e", url: "./pages/test/html" },
-               { tit: "lnb_f", url: "./pages/test/html" },
-               { tit: "lnb_g", url: "./pages/test/html" },
-            ]
-            let lnb2 = [
-               { tit: "lnb_h", url: "./pages/test/html" },
-               { tit: "lnb_i", url: "./pages/test/html" },
-               { tit: "lnb_j", url: "./pages/test/html" },
-               { tit: "lnb_k", url: "./pages/test/html" },
-            ]
-            for (let i = 0; i < lnb1.length; i++) {
-               $(".gnbWrap > li:nth-child(1)").append(`<ul><li><a href='${lnb1[i].url}'>${lnb1[i].tit}</a></li></ul>`)
-            }
-            for (let i = 0; i < lnb2.length; i++) {
-               $(".gnbWrap > li:nth-child(2)").append(`<ul><li><a href='${lnb2[i].url}'>${lnb2[i].tit}</a></li></ul>`)
-            }
+   <body>
+      <div class="wrapper">
+         <header class="hd"></header>
+
+         <main class="main">content.....</main>
+
+         <footer class="ft"></footer>
+      </div>
+
+      <script src="./include/include.js" defer></script>
+      <script src="./js/jquery-3.6.1.min.js"></script>
+      <script>
+         $.ajax({
+            url: "../include/header.html",
+            success: function (result) {
+               $(".hd").html(result)
+            },
+         })
+         $.ajax({
+            url: "../include/footer.html",
+            success: function (result) {
+               $(".ft").html(result)
+            },
          })
       </script>
    </body>
